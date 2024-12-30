@@ -19,10 +19,13 @@
       font-size: 15px;
       float: right;
     }
+    .ex{
+      font-size: 15px;
+    }
   </style>
 </head>
 
-<body onload="loadFunc()" bgcolor="#A2DCC7">
+<body onload="loadFunc();dayStreak()" bgcolor="#A2DCC7">
   <center>
     <img src="/maa.png" width="200px">
     <p>(i)</p>
@@ -30,18 +33,17 @@
     <details>
       <summary>Check Tasks</summary>
       <summary id="sigma">
-       <p align="left">(1)Wake up before 6 AM <span id="ch1" ondblclick="tickSlef('ch1')" onclick="tickSelf('ch1')" >[&nbsp]</span></p>
-       <p align="left">(2)Visit atleast 1 temple or read extra stotram or extra mantra jaap<span id="ch2" ondblclick="tickSlef('ch2')" onclick="tickSelf('ch2')" >[&nbsp]</span></p>
-       <p align="left">(3)Inform on no. of gaitri jaap/naam jaap  <span id="ch3" ondblclick="tickSlef('ch3')" onclick="tickSelf('ch3')" >[&nbsp]</span></p>
-       <p align="left">(4)Dedicate atleast 1 hour for shastra adhyan <span id="ch4" ondblclick="tickSlef('ch4')" onclick="tickSelf('ch4')" >[&nbsp]</span></p>
+       <p align="left">(1)Wake up before 6 AM <span id="ch1" ondblclick="tickSlef('ch1');saveFunc()" onclick="tickSelf('ch1');saveFunc()" >[&nbsp]</span></p>
+       <p align="left">(2)Visit atleast 1 temple or read extra stotram or extra mantra jaap<span id="ch2" ondblclick="tickSlef('ch2');saveFunc()" onclick="tickSelf('ch2');saveFunc()" >[&nbsp]</span></p>
+       <p align="left">(3)Inform on no. of gaitri jaap/naam jaap  <span id="ch3" ondblclick="tickSlef('ch3');saveFunc()" onclick="tickSelf('ch3');saveFunc()" >[&nbsp]</span></p>
+       <p align="left">(4)Dedicate atleast 1 hour for shastra adhyan <span id="ch4" ondblclick="tickSlef('ch4');saveFunc()" onclick="tickSelf('ch4');saveFunc()" >[&nbsp]</span></p>
       </summary>
     </details><br>
     <details>
       <summary>Help</summary>
-      <summary>To check a list click on the box, to uncheck it if marked by mistake , double click the box.
-      To save just click the save button</summary>
+      <summary>To check a list click on the box, to uncheck it if marked by mistake , double click the box.</summary>
     </details><br>
-    <b onclick="saveFunc()">[Save?]</b>
+    <p class="ex" style="position: absolute;top: 0px;left:0px;">Day:<span id="day">0</span></p>
   </center>
 <script src="script.js"></script>
 </body>
